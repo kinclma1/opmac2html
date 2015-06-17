@@ -7,11 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = "opmac2html"
   spec.version       = Opmac2html::VERSION
   spec.authors       = ["Martin Kinčl"]
-  spec.email         = ["kinclma1"]
   spec.summary       = %q{Converter from OPmac TeX markup to HTML}
   spec.description   = %q{A converter of TeX documents written using OPmac macro set
                           to HTML5 pages}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/kinclma1/opmac2html"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
