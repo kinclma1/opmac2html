@@ -2,7 +2,7 @@ module Opmac2html
   # Mixin providing parsing of macro calls
   module MacroParser
     TITLES = %w(\\tit \\chap \\sec \\secc)
-    IN_PAR_MACROS = %w(\\TeX \\LaTeX \\csplain)
+    IN_PAR_MACROS = %w(\\TeX \\LaTeX \\csplain \\url \\ulink)
 
     def parse_macro
       title_index = TITLES.index { |t| @input.start_with? t }
