@@ -1,7 +1,7 @@
 module Opmac2html
   # Mixin providing parsing of macro calls
   module MacroParser
-    TITLES = %w(\\tit \\chap \\sec \\secc)
+    TITLES = %w(\\tit \\chap \\sec\  \\secc)
     IN_PAR_MACROS = %w(\\TeX \\LaTeX \\csplain \\url \\ulink)
 
     def parse_macro
@@ -100,6 +100,8 @@ module Opmac2html
         err part[0] + part[1]
         @input = part[2]
       elsif part_line[0].start_with?('\\noindent')
+        err cut_at(/\s/)
+      elsif part_line[0].start_with?('\\nonum')
         err cut_at(/\s/)
       elsif part_line[0].start_with? '\\label'
         parse_label
